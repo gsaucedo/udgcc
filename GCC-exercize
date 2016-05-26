@@ -1,0 +1,65 @@
+Compiler: translates source code into lower level format, asm, object or executable binary
+
+Installation
+
+Fedora:
+sudo dnf groupinstall "C Development Tools and Libraries"
+
+Ubuntu:
+sudo apt-get install build-essential
+
+Basic compiling
+
+example 1
+gcc hello.c
+chmod u+x a.out
+./a.out
+
+example 2
+gcc hello.c -o hello
+chmod u+x hello
+./hello
+
+example 3
+gcc main_hello.c print_hello.c -o hello
+chmod u+x hello
+./hello
+
+Separate compile and link
+
+example 4
+gcc -c main_hello.c
+gcc -c print_hello.c
+gcc -o hello main_hello.o print_hello.o
+chmod u+x hello
+./hello
+
+example 5
+gcc -c main_calc.c
+gcc -c cir_area.c
+gcc -o area main_calc.o cir_area.o
+chmod u+x area
+./area
+
+example 6
+gcc -c rec_area.c
+gcc -o area main_calc.o rec_area.o
+
+Preprocessor
+
+example 7
+gcc -E cir_area.c
+
+example 8
+gcc -DLEVEL=1 print_lv.c
+chmod u+x a.out
+./a.out
+gcc -DLEVEL=2 print_lv.c
+chmod u+x a.out
+./a.out
+
+Misc
+Optimization -Os -O0 -O1 -O2 -O3
+Debuging -g (include symbols)
+Warnings -Wall -Werror
+Including -I<dir> -include <file>
