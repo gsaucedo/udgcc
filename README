@@ -1,2 +1,46 @@
+installation:
+1 run:
+  sudo apt-get/dnf install git
+
+Exercise:
+
+1 clone and set up a repo:
+NOTE: this github specific
+  * create an account on github.com and tell me you id.
+  * git clone https://github.com/gsaucedo/udgcc.git
+  * cd udgcc
+  * git config user.email <whatever@something>
+  * git config user.name <nickname>
+  * git config core.editor <yours>
+
+2 start editing:
+  * edit asientos file and write your name at your 'asiento','fila'
+    (there should be no collisions this time)
+  * git status
+  * git add asientos
+  * git status
+  * git commit
+    write a meaningful message
+
+3 check your changes
+  * git log -2
+  * git log
+
+4 push your changes
+NOTE: by now I should have granted you permissions
+  * git pull
+  * git push
+  * git log -3
+  * git pull
+  * git log -3
+  * etc.
+
+5 create conflicts
+  * repeat steps on 2 but now edit lista, add your name
+  * repeat 4 (and see the conflicts)
+
+https://github.com/gsaucedo/udgcc
+
 sources:
 http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
